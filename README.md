@@ -138,7 +138,7 @@ Sorted! This will update our `scope` with the new value. This is also effectivel
 
 One problem - we don't *really* use `$scope` anymore - we use controller values. Well, much like when we required the parent controller in our previous README, we can actually request our own directives controller for use in the link function.
 
-To do this, we add `require` with the value `ngController`. Before, we used `^nameOfDirective` to get the parent's directive. Notice how we aren't using a `^` anymore - we are no longer looking upwards to the parents for a controller - instead, we're asking for the controller of the directive (the `ngController` part).
+To do this, we add `require` with the value `someDirective`. Before, we used `^nameOfDirective` to get the parent's directive. Notice how we aren't using a `^` anymore - we are no longer looking upwards to the parents for a controller - instead, we're asking for the controller of the directive (the `someDirective` part).
 
 ```js
 function SomeDirective() {
@@ -149,7 +149,7 @@ function SomeDirective() {
 				'{{ some.status }}',
 			'</div>'
 		].join(''),
-		require: 'ngController',
+		require: 'someDirective',
 		controller: function () {
 			$scope.status = 'Not clicked!';
 		},
@@ -186,7 +186,7 @@ function SomeDirective() {
 				'{{ some.status }}',
 			'</div>'
 		].join(''),
-		require: 'ngController',
+		require: 'someDirective',
 		controller: function () {
 			this.status = 'Not clicked!';
 		},
