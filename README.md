@@ -175,7 +175,7 @@ angular
 
 Have a look at the minor changes we've made - we've now got that fourth argument in our link function too, and we're updating `ctrl.status` in our event.
 
-However, our status value is still on our `scope`. We need to change this over to the controller, using `controllerAs`. We can then attach the value to `this` instead of the scope.git
+However, our status value in our controller is still on our `scope`. We need to change this over to the controller, using `controllerAs`. We can then attach the value to `this` instead of the scope.
 
 ```js
 function SomeDirective() {
