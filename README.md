@@ -64,7 +64,7 @@ angular
 	.directive('someDirective', SomeDirective);
 ```
 
-We're adding a DOM event to the actual DOM event rather than using jQuery/jqLite. This is because the API for them slightly differ, and as we can't guarantee what would be loaded on the page, we'll use native JavaScript events instead.
+We're adding a DOM event to the actual DOM element rather than using jQuery/jqLite. This is because the API for them slightly differ, and as we can't guarantee what would be loaded on the page, we'll use native JavaScript events instead.
 
 Here, we will get an alert showing when the user clicks on the span. Awesome! Now, say that we want to actually update the `scope` values when the user clicks on the span - how do we do this? First of all, let's put a scope value in our view and controller:
 
